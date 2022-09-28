@@ -227,7 +227,7 @@
 		// Set true so emails are never sent, they are logged
 		"testBogusSend": false, 
 		// Test Recipient (all emails only sent to this email address)
-		"testRecipient": "lucienems@live.com"
+		"testRecipient": "info@skyve.org"
 	},
 	// Map Settings
 	"map": {
@@ -296,7 +296,7 @@
 		// (note that if you are running on Windows do NOT use backslashes)		
 		"moduleDirectory": null,
 		// email address for system support
-		"supportEmailAddress": "lucienems@live.com",
+		"supportEmailAddress": "info@skyve.org",
 		// Show Setup screen on sign in for DevOps users
 		"showSetup": true
 	},
@@ -305,7 +305,7 @@
 	"bootstrap": {
 		"customer": "skyve",
 		"user": "${BOOTSTRAP_USERNAME:setup}",
-		"email": "lucienems@live.com",
+		"email": "info@skyve.org",
 		"password": "${BOOTSTRAP_PASSWORD:setup}"
 	}
 }
