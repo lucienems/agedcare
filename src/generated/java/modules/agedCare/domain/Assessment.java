@@ -118,7 +118,7 @@ public class Assessment extends AbstractPersistentBean {
 	@XmlTransient
 	public String getBizKey() {
 		try {
-			return org.skyve.util.Binder.formatMessage("Assessment", this);
+			return org.skyve.util.Binder.formatMessage("Assessment - {hygieneAssessment}", this);
 		}
 		catch (@SuppressWarnings("unused") Exception e) {
 			return "Unknown";
