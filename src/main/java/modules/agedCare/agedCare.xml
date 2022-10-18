@@ -37,9 +37,5 @@
             <role name="Maintainer"/>
             <role name="Viewer"/>
         </list>
-        <list document="Assessment" name="Assessments">
-            <role name="Maintainer"/>
-            <role name="Viewer"/>
-        </list>
     </menu>
 </module>
