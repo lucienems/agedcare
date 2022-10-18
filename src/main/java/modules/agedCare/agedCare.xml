@@ -3,9 +3,9 @@
     <homeRef>list</homeRef>
     <homeDocument>Resident</homeDocument>
     <documents>
-        <document ref="Resident"/>
-        <document ref="Facility"/>
-        <document ref="Assessment"/>
+        <document ref="Resident" defaultQueryName="qResident"/>
+        <document ref="Facility" defaultQueryName="qFacility"/>
+        <document ref="Assessment" defaultQueryName="qAssessment"/>
         <document ref="Contact" moduleRef="admin"/>
         <document ref="DataGroup" moduleRef="admin"/>
         <document ref="User" moduleRef="admin"/>
@@ -42,4 +42,43 @@
             <role name="Viewer"/>
         </list>
     </menu>
+    <queries>
+		    <query documentName="Resident" name="qResident">
+		    <description>All Resident</description>
+		    <columns>
+		   	<content display="thumbnail" binding="photo" pixelHeight="45" pixelWidth="45" />
+		    	<column binding="residentID" sortOrder="ascending" hidden="true" />
+		    	<column binding="residentName" sortOrder="ascending" />
+		    	<column binding="DOB" sortOrder="ascending" />
+		    	<column binding="roomNo" sortOrder="ascending" />
+		    	<column binding="BIO" sortOrder="ascending" />
+		    	<column binding="admissionDate" sortOrder="ascending" hidden="true" />
+		    	<column binding="facility.facilityName" sortOrder="ascending" />
+		    </columns>
+		    </query>
+		    <query documentName="Facility" name="qFacility">
+				<description>All Facilities</description>
+				<columns>
+					<column binding="facilityName" sortOrder="ascending" />
+					<column binding="buildingNumber" sortOrder="ascending" />
+					<column binding="streetName" sortOrder="ascending" />
+					<column binding="suburb" sortOrder="ascending" />
+					<column binding="state" sortOrder="ascending" />
+					<column binding="facilityManager" sortOrder="ascending" hidden="true" />
+					<column binding="location" sortOrder="ascending" hidden="true" />
+				</columns>
+			</query>
+			<query documentName="Assessment" name="qAssessment">
+			    <description>All Assessments</description>
+			    <columns>
+			    	<column binding="hygieneAssessment" sortOrder="ascending" />
+			    	<column binding="painAssessment" sortOrder="ascending"   hidden="true"/>
+			    	<column binding="continenceAssessment" sortOrder="ascending" />
+			    	<column binding="sleepAssessment" sortOrder="ascending" />
+			    	<column binding="behaviourAssessment" sortOrder="ascending" hidden="true" />
+			    	<column binding="assessmentCreatedBy" sortOrder="ascending" />
+			    	<column binding="assessmentReviewTime" sortOrder="ascending" hidden="true" />
+			    </columns>
+			</query>
+	</queries>
 </module>
