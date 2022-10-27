@@ -40,6 +40,11 @@
             <displayName>Facility</displayName>
             <documentName>Facility</documentName>
         </association>
-        
+        <collection type="child" name="assessments">
+            <displayName>Assessments</displayName>
+            <documentName>Assessment</documentName>
+            <minCardinality>0</minCardinality>
+            <ordering/>
+        </collection>
     </attributes>
 </document>
